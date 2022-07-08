@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>3300 Project 2</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="TEMP">
+      <div class="introduction">
+        <div class='banner'>
+          <div class='inline '>
+            <div class="border leftline"></div>
+            <h1>Build-a-Board: Chess Meta Visualization</h1>
+            <div class="border rightline"></div>
+          </div>
+
+        </div>
+
+
+        <h3>In this project, we present a visualization of which pieces are moved
+          most often at different points during a chess game, and to which rows,
+          columns, and cells they are most frequently moved. We also allow
+          these results to be filtered by player level and color. We invite
+          you to play around with the following options.
+        </h3>
+        <h1>&#9818;&#9819;&#9820;</h1>
+      </div>
+      <div class="step left" id="step1">
+        <h3>Step 1: Select what data to analyze: </h3>
+        <select name="data-source" id="data-source">
+          <option value="pieceType">Piece Types</option>
+          <option value="rows">Rows</option>
+          <option value="columns">Columns</option>
+          <option value="destination">Destinations</option>
+        </select>
+        <div id="step1description" class="description">
+          <!-- Displayed by JS -->
+          <p id="pieceTypeDes" style="display: none;">
+            Data on individual chess pieces (King, Queen, Knight, Rook, etc...)
+          </p>
+          <p id="rowsDes" style="display: none;">
+            Data for rows (1, 2, 3, ..., 8)
+          </p>
+          <p id="columnsDes" style="display: none;">
+            Data for columns (a, b, c, ..., h)
+          </p>
+          <p id="destinationDes" style="display: none;">
+            Data for destinations on the chess board (a1, a2, a3, ..., h8)
+          </p>
+        </div>
+      </div>
+      <div class="step left" id="step2">
+        <h3>Step 2: Select graph type: </h3>
+        <select name="graph-type" id="graph-type">
+          <option value="normalizedStacked">Normalized Stacked</option>
+          <option value="stacked">Stacked</option>
+          <option value="line">Line</option>
+        </select>
+        <div id="step2description" class="description">
+          <!-- Displayed by JS -->
+          <p id="normalizedStackedDes" style="display: none;">
+            Display y-axis data normalized from 0 to 1
+          </p>
+          <p id="stackedDes" style="display: none;">
+            Display y-axis data
+          </p>
+          <p id="lineDes" style="display: none;">
+            Display y-axis data as a line connecting peaks
+          </p>
+        </div>
+      </div>
+      <div class="step" id="step3">
+        <h3>Step 3: Adjust graph display with the following filters: </h3>
+        <div class='header'>
+          <div class="horiz elos filter">
+            <p>Filter by skill (ELO):</p>
+            <input type="radio" id="all" name="elo" value="" checked>
+            <label for="all">All</label>
+            <br />
+            <input type="radio" id="low" name="elo" value="_low">
+            <label for="low">Low (ELO < 1225)</label>
+                <br />
+                <input type="radio" id="mid" name="elo" value="_mid">
+                <label for="mid">Middle</label>
+                <br />
+                <input type="radio" id="high" name="elo" value="_hi">
+                <label for="high">High (ELO > 1875)</label>
+          </div>
+          <div class="horiz colors filter">
+            <p>Filter by player:</p>
+            <input type="radio" id="separate" name="color" value="separate" checked>
+            <label for="separate">Both (separate)</label>
+            <br />
+            <input type="radio" id="aggregated" name="color" value="aggregated">
+            <label for="aggregated">Both (aggregated)</label>
+            <br />
+            <input type="radio" id="white" name="color" value="white">
+            <label for="white">White only</label>
+            <br />
+            <input type="radio" id="black" name="color" value="black">
+            <label for="black">Black only</label>
+          </div>
+          <div id="filtersDiv" class='horiz filter'>
+            <p id='filtersTitle'></p>
+            <div class=" filters filter" id="filters">
+              <!-- filled by js -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="graphs">
+      <div class="horiz time-series">
+        <svg id="time-series-graph" class='element' height="500" width="800"></svg>
+        <div class="horiz summary time-series element">
+        </div>
+
+      </div>
+
+      <div class="horiz heatmap">
+        <svg id="heatmap-graph" class='element' height="500" width="550"></svg>
+        <input type="range" class="horiz slider heatmap element" id="time" name="time" step=1>
+      </div>
+
+
+    </div>
+
+  </div>
+
+  <script src="data.js"></script>
+  <script src="visualization.js"></script>
+</body>
+
+</html>

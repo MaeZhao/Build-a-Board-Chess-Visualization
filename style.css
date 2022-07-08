@@ -1,0 +1,264 @@
+@font-face {
+font-family: "Montserrat";
+src: url("fonts/Montserrat-Regular.ttf") format("truetype");
+}
+@font-face {
+font-family: "NanumExtraBold";
+src: url("fonts/NanumGothic-ExtraBold.ttf") format("truetype");
+}
+@font-face {
+font-family: "NanumBold";
+src: url("fonts/NanumGothic-Bold.ttf") format("truetype");
+}
+@font-face {
+font-family: "MontserratLight";
+src: url("fonts/Montserrat-ExtraLight.ttf") format("truetype");
+}
+@font-face {
+font-family: "Roboto";
+src: url("fonts/Roboto-Regular.ttf") format("truetype");
+}
+@font-face {
+font-family: "RobotoLight";
+src: url("fonts/Roboto-Light.ttf") format("truetype");
+}
+@font-face {
+font-family: "RobotoCondensed";
+src: url("fonts/RobotoCondensed-Regular.ttf") format("truetype");
+}
+
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(#404040 0%, #0D0D0D 20%);
+    color: #F2F2F2;
+
+}
+
+.slider.heatmap.element {
+    padding: 0px;
+}
+.step{
+    /* background-color: #404040; */
+    padding: 10px 0px 10px 0px;
+}
+
+h1{
+    font-family: 'MontserratLight', Helvetica, sans-serif;
+    font-variant: small-caps;
+    width: fit-content;
+    margin-left:auto;
+    margin-right: auto;
+    
+}
+
+.banner h1{
+    margin-bottom: 0px;
+
+}
+
+.banner .inline{
+    margin-top: 0px;
+}
+.header, .content, .graphs{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin:20px;
+    /*gap: 20px;*/
+    margin-left:auto;
+    margin-right:auto;
+}
+.left{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: left;
+    align-items: flex-start;
+    flex-direction: row;
+    margin-left:auto;
+    margin-right:auto;
+}
+.border{
+    /* border-top-color: #495254; */
+    border-width: 1px 0px 0px 0px;
+    border-style: solid;
+    margin-top:40px;
+    /* border-bottom-color: #0D0D0D;
+    border-left-color: #0D0D0D;
+    border-right-color: #0D0D0D; */
+    
+}
+.inline{
+    display: flex;
+    flex-direction: row;
+    margin-top:10px
+    
+}
+.leftline{
+    flex:1;
+    margin-right: 5px;
+    border-radius: 0px 0px;
+}
+
+.rightline{
+    flex:1;
+    margin-left: 5px;
+    border-radius: 0px 0px;
+}
+/* .step{
+    background-color: #D8D5E2;
+} */
+
+.graphs .horiz{
+    
+    /* height: 450px; */
+    margin: 5px;
+    width: fit-content;
+}
+.element{
+    background-color: #404040;
+    margin:5px;
+    padding:10px;
+}
+
+.horiz {
+    flex-grow: 0;
+    flex-shrink: 1;
+    padding: 10px;
+}
+
+.container {
+    width: 1500px;
+    margin: 0px;
+    padding: 0px;
+    /* min-height: 100vh; */
+    margin: auto;
+}
+.filter{
+    height:inherit !important;
+    background-color: #DEDEDE !important;
+    color:#060606;
+    /* margin-left:10px !important; */
+    border-radius: 5px;
+
+}
+
+.description p{
+    margin-top: 18.72px;
+    margin-bottom: 18.72px;
+    padding-left:10px;
+}
+/* #filters{
+    width: 700px;
+} */
+.header {
+    height: 150px;
+}
+
+.dropdowns {
+    width: 250px;
+}
+/* .filtersDiv{
+    width: 310px;
+    height: 115px;
+    background-color: #eee;
+    padding: 10px;
+} */
+
+.elos {
+    width: 180px;
+    background-color: #ddd;
+}
+
+.colors {
+    width: 180px;
+    background-color: #ccc;
+}
+.label, .chartTitle {
+    fill:#F2F2F2;
+    font-family: 'RobotoLight';
+    font-variant: small-caps;
+}
+.chartTitle{
+    font-size: larger;
+}
+
+.filters {
+    width: 310px ;
+    height: 115px !important;
+    padding: 0px;
+    margin: 0;
+    overflow-x: auto;
+    white-space: nowrap;
+    background-color: #eee;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 5px;
+}
+
+.horiz p {
+    margin-top: 0px;
+}
+
+.checkbox-div {
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+/* .time-series { */
+    /* height: 700px; */
+/* } */
+#time{
+    width:520px;
+}
+.summary h4{
+    margin: 0px;
+}
+/* .heatmap { */
+    /* height: 700px; */
+    /* width: 360px; */
+/* } */
+.summary{
+    width:900px;
+}
+
+.gridlines line {
+    stroke: #bbb;
+}
+
+.gridlines .domain {
+    stroke: none;
+}
+
+#legends span {
+    padding: left 10px;
+    padding-right: 10px;
+}
+
+g.mouseover rect {
+    fill: white;
+    stroke: #222;
+    stroke-width: 1px;
+}
+
+g.mouseover text {
+    font-family: Arial, sans-serif;
+}
+
+g.mouseover text:first-child {
+    font-weight: bold;
+}
+
+select {
+    font-size: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left:20px
+}

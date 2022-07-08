@@ -1,0 +1,15 @@
+{
+  "name": "cs3300-project2",
+  "version": "1.0.0",
+  "description": "- **Milestone 1**: October 29th 2021, 11:59 pm ET\r - **Milestone 2**: November 5th 2021, 11:59 pm ET\r - **Final Submission**: November 17th 2021, 11:59 pm ET",
+  "main": "etl.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.coecis.cornell.edu/yz862/cs3300-project2.git"
+  },
+  "author": "",
+  "license": "ISC"
+}
